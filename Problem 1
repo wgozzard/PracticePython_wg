@@ -1,0 +1,20 @@
+#Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.
+
+#Extras:
+#Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. (Hint: order of operations exists in Python)
+#Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
+
+from datetime import datetime
+curr_year = datetime.now().year
+x = input("Please tell me your first name? ")
+y = input("Please tell me your age? ")
+z = input("Please enter a number for a special message? ")
+message = "\nHi there"
+try:
+    num = int(y) + int(curr_year)
+    num1 = int(z)
+    print(x + " ,you will be 100 in year", num)
+    print(message * num1)
+    print("We printed this",num1,"times")
+except:
+    print("Please enter a number")
